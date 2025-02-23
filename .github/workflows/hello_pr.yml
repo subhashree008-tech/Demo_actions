@@ -1,0 +1,13 @@
+name: PR Workflow
+
+on: [pull_request]
+
+jobs:
+  test-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Print a Message
+        run: echo "Testing Hello World on PR"
